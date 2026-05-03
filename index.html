@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Система управління транспортом</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Система управління транспортом</h1>
+
+    <section class="card">
+      <h2>Додати транспорт</h2>
+
+      <form id="vehicleForm">
+        <select id="type" required>
+          <option value="car">Легковий автомобіль</option>
+          <option value="truck">Вантажівка</option>
+          <option value="motorcycle">Мотоцикл</option>
+        </select>
+
+        <input id="brand" placeholder="Бренд" required />
+        <input id="model" placeholder="Модель" required />
+        <input id="year" type="number" placeholder="Рік" required />
+        <input id="mileage" type="number" placeholder="Пробіг" required />
+        <input id="fuelLevel" type="number" placeholder="Паливо %" required />
+
+        <div id="extraFields"></div>
+
+        <button type="submit">Додати</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Фільтри</h2>
+
+      <select id="filterType">
+        <option value="all">Усі типи</option>
+        <option value="car">Автомобілі</option>
+        <option value="truck">Вантажівки</option>
+        <option value="motorcycle">Мотоцикли</option>
+      </select>
+
+      <input id="filterYear" type="number" placeholder="Рік від" />
+      <input id="filterMileage" type="number" placeholder="Пробіг до" />
+    </section>
+
+    <section class="card">
+      <h2>Статистика</h2>
+      <p id="stats"></p>
+    </section>
+
+    <section class="card">
+      <h2>Автопарк</h2>
+      <div id="vehicleList"></div>
+    </section>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
